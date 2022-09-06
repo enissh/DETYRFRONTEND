@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://kit.fontawesome.com/95bad400b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="container">
+        <div class="container__left">
+            <img src="images/background1.jpg">
+            <div class="container__left--card-front">
+                <p class="container__left--card-front-number" id="number">0000 0000 0000 0000 </p>
+                <p class="container__left--card-front-person" id="name">Jane Applesseed</p>
+                <p class="container__left--card-front-month" id="month">00</p>
+                <p class="container__left--card-front-year" id="year">00</p>
+            </div>
+            <div class="container__left--card-back">
+                <Hr>
+                <p class="container__left--card-back-p" id="cvc">000</p>
+                <div class="container__left--card-back-hr">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="container__right">
+            <form id="myForm" name="myForm">
+                <label class="cardholder-name">CARDHOLDER NAME</label><br>
+                <input min="1 " max="15" value="" maxlength="15" type="text" placeholder="e.g.Jane Appleseed"
+                    id="inputName" oninput="myFunction()" name="cardholder-name"><Br>
+                <p class="errormsg" id="errorMsg"></p>
+                <label>CARD NUMBER</label><Br>
+                <input min="16" max="16" type="number" value="" maxlength="16" placeholder="e.g. 1234 5678 1234 5678"
+                    id="inputNumber" name="cardholder-name" oninput="cardNumber()">
+                <p class="errormsg" id="errorMsg"></p>
+                <label>EXP. DATE (MM/YY) </label>
+                <label>CVC</label>
+                <div class="container__right-input-flex">
+                    <input min="1 " max="2" value="" maxlength="2" type="number" placeholder="MM" name="expiry-date"
+                        id="inputMonth" oninput="cardMonth()">
+                    <input min="1 " max="2" value="" maxlength="2" type="number" placeholder="YY" name="expiry-date"
+                        id="inputYear" oninput="cardYear()">
+                    <p id="exipry-error"></p>
+                    <input min="1 " max="3" type="number" placeholder="e.g. 123" id="inputCvc" oninput="cardCvc()"
+                        name="cvc">
+                </div>
+                <p id="error-cvc"></p>
+                <button id="submit">Confirm</button>
+
+
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
